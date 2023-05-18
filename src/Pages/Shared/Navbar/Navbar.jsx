@@ -22,10 +22,18 @@ const Navbar = () => {
 
       <div className="navbar-center hidden lg:flex">
         <img
-          className="w-16 mt-4 me-4 "
+          className="w-16 mt-8 me-4 w-20 rounded-full ring ring-black ring-offset-base-100 ring-offset-2 mb-8"
           src="https://i.ibb.co/7pt0pk5/95769f17-3f9b-4581-9f85-47802fc10c6d-ada9894174d16d94447334a6eb42ff20-modified.png"
           alt=""
         />
+                  {/* <li>
+            <a><img className="w-20 rounded-full mx-5" src="https://i.ibb.co/g9XRH44/BT21-MANG-FACE-REVEAL.jpg" alt="" /></a>
+          </li> */}
+
+
+        {/* <li>
+            <a><img className="w-20 rounded-full mx-5" src="https://i.ibb.co/g9XRH44/BT21-MANG-FACE-REVEAL.jpg" alt="" /></a>
+          </li> */}  
         <h1 className="font-extrabold text-2xl">Marvel Vault</h1>
       </div>
 
@@ -37,9 +45,7 @@ const Navbar = () => {
           <li>
             <a>Blogs</a>
           </li>
-          {/* <li>
-            <a><img className="w-20 rounded-full mx-5" src="https://i.ibb.co/g9XRH44/BT21-MANG-FACE-REVEAL.jpg" alt="" /></a>
-          </li> */}
+
         </ul>
         <a className="btn hidden">Login</a>
       </div>

@@ -36,7 +36,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className=" px-8 bg-warning">
+    <div className=" px-8 ">
 
         
     <div className="hero min-h-screen bg-base-200 bg-black  h-96 rounded-xl">

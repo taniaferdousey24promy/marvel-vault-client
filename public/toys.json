@@ -1,0 +1,156 @@
+[
+    {
+      "id": 0,
+      "category": "Avengers",
+      "subCategories": [
+        {
+          
+          "name": "Iron Man",
+          "pictureUrl": "https://example.com/ironman.jpg",
+          "price": 19.99,
+          "rating": 4.5,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 10
+        },
+        {
+          
+          "name": "Captain America",
+          "pictureUrl": "https://example.com/captainamerica.jpg",
+          "price": 17.99,
+          "rating": 4.2,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 5
+        },
+        {
+          
+          "name": "Thor",
+          "pictureUrl": "https://example.com/thor.jpg",
+          "price": 21.99,
+          "rating": 4.8,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 3
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "category": "X-Men",
+      "subCategories": [
+        {
+          "name": "Wolverine",
+          "pictureUrl": "https://example.com/wolverine.jpg",
+          "price": 24.99,
+          "rating": 4.7,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 8
+        },
+        {
+          "name": "Cyclops",
+          "pictureUrl": "https://example.com/cyclops.jpg",
+          "price": 18.99,
+          "rating": 4.4,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 4
+        },
+        {
+          "name": "Storm",
+          "pictureUrl": "https://example.com/storm.jpg",
+          "price": 22.99,
+          "rating": 4.6,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Guardians of the Galaxy",
+      "subCategories": [
+        {
+          "name": "Star-Lord",
+          "pictureUrl": "https://example.com/starlord.jpg",
+          "price": 20.99,
+          "rating": 4.3,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 7
+        },
+        {
+          "name": "Gamora",
+          "pictureUrl": "https://example.com/gamora.jpg",
+          "price": 19.99,
+          "rating": 4.1,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 6
+        },
+        {
+          "name": "Drax",
+          "pictureUrl": "https://example.com/drax.jpg",
+          "price": 23.99,
+          "rating": 4.5,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 9
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Spider-Man",
+      "subCategories": [
+        {
+          "name": "Spider-Man",
+          "pictureUrl": "https://example.com/spiderman.jpg",
+          "price": 18.99,
+          "rating": 4.4,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 5
+        },
+        {
+          "name": "Venom",
+          "pictureUrl": "https://example.com/venom.jpg",
+          "price": 22.99,
+          "rating": 4.6,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 3
+        },
+        {
+          "name": "Green Goblin",
+          "pictureUrl": "https://example.com/greengoblin.jpg",
+          "price": 19.99,
+          "rating": 4.3,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 7
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Black Widow",
+      "subCategories": [
+        {
+          "name": "Black Widow",
+          "pictureUrl": "https://example.com/blackwidow.jpg",
+          "price": 21.99,
+          "rating": 4.5,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 6
+        },
+        {
+          "name": "Hawkeye",
+          "pictureUrl": "https://example.com/hawkeye.jpg",
+          "price": 20.99,
+          "rating": 4.2,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 4
+        },
+        {
+          "name": "+",
+          "pictureUrl": "https://example.com/taskmaster.jpg",
+          "price": 23.99,
+          "rating": 4.7,
+          "sellerName": "Marvel Store",
+          "availableQuantity": 9
+        }
+      ]
+    }
+  ]
+  
