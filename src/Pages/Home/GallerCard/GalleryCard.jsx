@@ -12,7 +12,7 @@ const GalleryCard = ({ toy }) => {
         subCategory={subCategory}
          >
           {
-          subCategory.id == 1 && <div className="card ml-4 glass">
+          subCategory.id == 0 && <div className="card ml-4 glass">
             <figure>
             <img src={subCategory.pictureUrl}  className="w-96 h-96" alt="Movie" />
             </figure>

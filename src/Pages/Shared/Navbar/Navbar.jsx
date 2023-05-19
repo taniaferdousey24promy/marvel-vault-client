@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 
@@ -7,7 +8,7 @@ const Navbar = () => {
       <div className="navbar-start">
         <ul className="menu menu-horizontal ps-80">
           <li>
-            <a>Home</a>
+          <Link to="/">Home</Link>
           </li>
           <li>
             <a>All Toys</a>
@@ -43,7 +44,11 @@ const Navbar = () => {
             <a>Add A Toy</a>
           </li>
           <li>
-            <a>Blogs</a>
+            <Link to="/blogs">Blogs</Link>
+          </li>
+
+          <li>
+            <Link to="/login"><button className="bg-black text-white p-4 rounded-xl btn">Login</button></Link>
           </li>
 
         </ul>
