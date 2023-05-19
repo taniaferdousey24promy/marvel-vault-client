@@ -1,30 +1,33 @@
 [
     {
-      "id": 0,
-      "category": "Avengers",
+      "id": 1,
+      "Category": "Avengers",
       "subCategories": [
         {
-          
+          "id": 1,
+
           "name": "Iron Man",
-          "pictureUrl": "https://example.com/ironman.jpg",
+          "pictureUrl": "https://i.ibb.co/8sTQsJ5/790ba285d376be7550e068e2c4f2c64c.jpg",
           "price": 19.99,
           "rating": 4.5,
           "sellerName": "Marvel Store",
           "availableQuantity": 10
         },
         {
-          
+          "id": 2,
+
           "name": "Captain America",
-          "pictureUrl": "https://example.com/captainamerica.jpg",
+          "pictureUrl": "https://i.ibb.co/RpGrPDR/images.jpg",
           "price": 17.99,
           "rating": 4.2,
           "sellerName": "Marvel Store",
           "availableQuantity": 5
         },
         {
-          
+          "id": 3,
+
           "name": "Thor",
-          "pictureUrl": "https://example.com/thor.jpg",
+          "pictureUrl": "https://i.ibb.co/PWWbbVy/w768.jpg",
           "price": 21.99,
           "rating": 4.8,
           "sellerName": "Marvel Store",
@@ -33,28 +36,31 @@
       ]
     },
     {
-      "id": 1,
-      "category": "X-Men",
+      "id": 2,
+      "Category": "X-Men",
       "subCategories": [
         {
+          "id": 1,
           "name": "Wolverine",
-          "pictureUrl": "https://example.com/wolverine.jpg",
+          "pictureUrl": "https://i.ibb.co/pJ4tZ6Z/C4819836-7.jpg",
           "price": 24.99,
           "rating": 4.7,
           "sellerName": "Marvel Store",
           "availableQuantity": 8
         },
         {
+          "id": 2,
           "name": "Cyclops",
-          "pictureUrl": "https://example.com/cyclops.jpg",
+          "pictureUrl": "https://i.ibb.co/L8xTGdF/download-1.jpg",
           "price": 18.99,
           "rating": 4.4,
           "sellerName": "Marvel Store",
           "availableQuantity": 4
         },
         {
+          "id": 3,
           "name": "Storm",
-          "pictureUrl": "https://example.com/storm.jpg",
+          "pictureUrl": "https://i.ibb.co/ws4BTZ2/815dqg8t-s-L-SY606.jpg",
           "price": 22.99,
           "rating": 4.6,
           "sellerName": "Marvel Store",
@@ -63,28 +69,31 @@
       ]
     },
     {
-      "id": 2,
-      "category": "Guardians of the Galaxy",
+      "id": 3,
+      "Category": "Guardians of the Galaxy",
       "subCategories": [
         {
+          "id": 1,
           "name": "Star-Lord",
-          "pictureUrl": "https://example.com/starlord.jpg",
+          "pictureUrl": "https://i.ibb.co/kJyb2T3/images-1.jpg",
           "price": 20.99,
           "rating": 4.3,
           "sellerName": "Marvel Store",
           "availableQuantity": 7
         },
         {
+          "id": 2,
           "name": "Gamora",
-          "pictureUrl": "https://example.com/gamora.jpg",
+          "pictureUrl": "https://i.ibb.co/kcrrVYN/gamora-10.jpg",
           "price": 19.99,
           "rating": 4.1,
           "sellerName": "Marvel Store",
           "availableQuantity": 6
         },
         {
+          "id": 3,
           "name": "Drax",
-          "pictureUrl": "https://example.com/drax.jpg",
+          "pictureUrl": "https://i.ibb.co/BwWPqQq/guardians-of-the-galaxy-dave-bautista-drax-the-destroyer.jpg",
           "price": 23.99,
           "rating": 4.5,
           "sellerName": "Marvel Store",
@@ -93,28 +102,31 @@
       ]
     },
     {
-      "id": 3,
-      "category": "Spider-Man",
+      "id": 4,
+      "Category": "Spider-Man",
       "subCategories": [
         {
+          "id": 1,
           "name": "Spider-Man",
-          "pictureUrl": "https://example.com/spiderman.jpg",
+          "pictureUrl": "https://i.ibb.co/DY24wnX/s-l1600-1.jpg",
           "price": 18.99,
           "rating": 4.4,
           "sellerName": "Marvel Store",
           "availableQuantity": 5
         },
         {
+          "id": 2,
           "name": "Venom",
-          "pictureUrl": "https://example.com/venom.jpg",
+          "pictureUrl": "https://i.ibb.co/K7DSg78/5vz8hpccyi351.jpg",
           "price": 22.99,
           "rating": 4.6,
           "sellerName": "Marvel Store",
           "availableQuantity": 3
         },
         {
+          "id": 3,
           "name": "Green Goblin",
-          "pictureUrl": "https://example.com/greengoblin.jpg",
+          "pictureUrl": "https://i.ibb.co/nRFnPj5/Scale-Photo-Size-Comparison-of-Sideshow-Green-Goblin-PF-Statue-e1449763752627.jpg",
           "price": 19.99,
           "rating": 4.3,
           "sellerName": "Marvel Store",
@@ -123,28 +135,31 @@
       ]
     },
     {
-      "id": 4,
-      "category": "Black Widow",
+      "id": 5,
+      "Category": "Black Widow",
       "subCategories": [
         {
+          "id": 1,
           "name": "Black Widow",
-          "pictureUrl": "https://example.com/blackwidow.jpg",
+          "pictureUrl": "https://i.ibb.co/BwDJNsg/1200x1200.jpg",
           "price": 21.99,
           "rating": 4.5,
           "sellerName": "Marvel Store",
           "availableQuantity": 6
         },
         {
+          "id": 2,
           "name": "Hawkeye",
-          "pictureUrl": "https://example.com/hawkeye.jpg",
+          "pictureUrl": "https://i.ibb.co/zZZLfd9/Screenshot-2023-05-18-191405.png",
           "price": 20.99,
           "rating": 4.2,
           "sellerName": "Marvel Store",
           "availableQuantity": 4
         },
         {
-          "name": "+",
-          "pictureUrl": "https://example.com/taskmaster.jpg",
+          "id": 3,
+          "name": "Taskmaster",
+          "pictureUrl": "https://i.ibb.co/jJxnspL/8fb4037a-778c-4e22-a8d5-0ee9eaf43d38-69035.jpg",
           "price": 23.99,
           "rating": 4.7,
           "sellerName": "Marvel Store",

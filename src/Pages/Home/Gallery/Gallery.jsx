@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import GalleryCard from "../GallerCard/GalleryCard";
 
 const Gallery = () => {
 
@@ -29,14 +30,14 @@ const Gallery = () => {
         Action Figues
       </span>
       <span className="ms-4 text-2pxl font-bold text-black">Accessories</span>
-      <div className="card card-side bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src=""
-            alt="Movie"
-          />
-        </figure>
-      </div>
+        <div className="flex mx-32 mt-20">
+            {
+                toys.map(toy => <GalleryCard
+                    key={toy.id}
+                    toy={toy}
+                ></GalleryCard>)
+            }
+        </div>
     </div>
   );
 };
