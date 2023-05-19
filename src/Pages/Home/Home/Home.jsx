@@ -4,6 +4,7 @@ import About from "../About/About";
 import Gallery from "../Gallery/Gallery";
 
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
+import Hello from "../Hello/Hello";
 
 const Home = () => {
   return (
@@ -11,9 +12,8 @@ const Home = () => {
       <Banner></Banner>
       <About></About>
       <Gallery></Gallery>
-      {/* <ShopByCategory></ShopByCategory> */}
-
-      
+      <Hello></Hello>
+      <ShopByCategory></ShopByCategory>
     </div>
   );
 };
