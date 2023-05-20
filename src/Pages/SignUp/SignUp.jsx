@@ -5,7 +5,7 @@ import GoogleBtn from "../GoogleBtn/GoogleBtn";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
-  const handleSignUp = (event) => {
+  const handleSignUp = event => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
@@ -13,10 +13,13 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+       
       })
 
       .catch((error) => console.log(error));
@@ -44,12 +47,13 @@ const SignUp = () => {
                     className="input input-bordered"
                   />
                 </div>
+                
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="email"
                     className="input input-bordered"
@@ -57,10 +61,10 @@ const SignUp = () => {
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Confirm Password</span>
+                    <span className="label-text"> Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="password"
                     className="input input-bordered"
@@ -80,10 +84,10 @@ const SignUp = () => {
                 </div>
               </form>
               <p>
-                Already have an account?{" "}
+                Already have an account?
                 <Link className="text-yellow-600 font-extrabold" to="/login">
                   Login
-                </Link>{" "}
+                </Link>
               </p>
             </div>
           </div>
