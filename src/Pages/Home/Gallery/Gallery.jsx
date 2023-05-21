@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import GalleryCard from "../GallerCard/GalleryCard";
 
 const Gallery = () => {
+  const [toys, setToys] = useState([]);
 
-    const [toys,setToys]= useState([]);
-
-    useEffect(() =>{
-        fetch('http://localhost:5000/toys')
-        .then((res)=> res.json())
-        .then((data)=> setToys(data));
-
-    },[])
-    console.log(toys);
+  useEffect(() => {
+    fetch("http://localhost:5000/toys/toys")
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  }, []);
+  console.log(toys);
   return (
     <div className="text-center">
       <h1 className="text-7xl font-bold text-black">TOYS HUB</h1>
@@ -30,14 +28,11 @@ const Gallery = () => {
         Action Figues
       </span>
       <span className="ms-4 text-2pxl font-bold text-black">Accessories</span>
-        <div className="flex mx-32 mt-20">
-            {
-                toys.map(toy => <GalleryCard
-                    key={toy.id}
-                    toy={toy}
-                ></GalleryCard>)
-            }
-        </div>
+      <div className="flex mx-32 mt-20">
+        {toys.map((toy) => (
+          <GalleryCard key={toy.id} toy={toy}></GalleryCard>
+        ))}
+      </div>
     </div>
   );
 };

@@ -55,14 +55,19 @@ const router = createBrowserRouter([
 
       {
         path: "/viewdetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
 
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(`http://localhost:5000/toys/toys/${params.id}`),
         // ),
         // loader: async ({ params }) =>{
         //   const response = await fetch(
-        //     `http://localhost:5000/toys/${params.id}`
+        //     `http://localhost:5000/toys/toys/${params.id}`
         //   );
         //   const data = await response.json();
         //   const desiredObject = data.nesetedArray.find(obj => obj.id == params.id);
