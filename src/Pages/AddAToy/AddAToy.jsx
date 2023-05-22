@@ -1,49 +1,55 @@
 import React from "react";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 const AddAToy = () => {
+  const handleAddAToy = (event) => {
+    event.preventDefault();
 
-    const handleAddAToy = event =>{
-        event.preventDefault();
+    const form = event.target;
 
-        const form = event.target;
+    const photo = form.photo.value;
+    const toyname = form.toyname.value;
+    const sellername = form.sellername.value;
+    const selleremail = form.selleremail.value;
+    const category = form.category.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const quantity = form.quantity.value;
+    const detail = form.detail.value;
 
-        const photo =form.photo.value;
-        const toyname = form.toyname.value;
-        const sellername = form.sellername.value;
-        const selleremail = form.selleremail.value;
-        const category = form.category.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const quantity = form.quantity.value;
-        const detail = form.detail.value;
+    const newToy = {
+      photo,
+      toyname,
+      sellername,
+      selleremail,
+      category,
+      price,
+      rating,
+      quantity,
+      detail,
+    };
+    console.log(newToy);
 
-        const newToy ={photo,toyname,sellername, selleremail,category,price,rating,quantity,detail};
-        console.log(newToy);
+    fetch("http://localhost:5000/toys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
 
-        fetch("http://localhost:5000/toys" ,{
-            method:"POST",
-            headers:{
-                "content-type": "application/json",
-
-            },
-            body: JSON.stringify(newToy),
-        })
-
-        .then((res)=> res.json())
-        .then((data)=>{
-            console.log(data);
-
-            if(data.insertedId){
-                Swal.fire({
-                    title:'Success',
-                    text:'Toy Added Successfully',
-                    icon:'Success',
-                    confirmButtonText:'Cool'
-                })
-            }
-        });
-         
-    }
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success",
+            text: "Toy Added Successfully",
+            icon: "Success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
+  };
   return (
     <div className="  bg-base-200 p-24 ">
       <h1 className="text-5xl font-bold ">Add A Toy</h1>

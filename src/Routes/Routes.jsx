@@ -63,7 +63,7 @@ const router = createBrowserRouter([
         ),
 
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/toys/${params.id}`),
+          fetch(`http://localhost:5000/toys/${params.id}`),
         // ),
         // loader: async ({ params }) =>{
         //   const response = await fetch(
