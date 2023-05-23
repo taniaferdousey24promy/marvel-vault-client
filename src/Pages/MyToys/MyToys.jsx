@@ -22,6 +22,25 @@ const MyToys = () => {
   } , [])
 
 
+  const handleDelete = id =>{
+    const proceed = confirm ('Are You Sure you want to DELETE');
+    if(proceed){
+      fetch(`http://localhost:5000/newToys${id}`,{
+        method:'DELETE'
+      })
+      .then(res=> res.json())
+      .then(data=>{
+        console.log(data);
+        if(data.deletedCount>0){
+          alert('deleted Sucessfully');
+          const remaining = selling.filter(sell =>sell._id !==id);
+          setSelling(remaining)
+        }
+      })
+
+    }
+  }
+
 
   
   // useEffect(() => {
@@ -39,6 +58,7 @@ const MyToys = () => {
           <thead className="">
             <tr className="">
          
+              <th className="bg-base-300  px-16   text-center"> Delete </th>
               <th className="bg-base-300  px-16   text-center">Seller Name</th>
               <th className="bg-base-300  pl-24   text-center">Toy Name</th>
               <th className="bg-base-300  pl-16  text-center">
@@ -57,6 +77,7 @@ const MyToys = () => {
               return (
                 <tr key={toy.id} className="text-center table w-full">
                   {/* <td className=" text-left ">{index + 1}</td> */}
+                  <td className="  pl-16"><button onClick={()=>handleDelete(toy_id)} className="btn bg-red-500">Delete</button></td>
                   <td className="  pl-16">{toy.sellerName}</td>
                   <td className="  pl-40">{toy.toyName}</td>
                   <td className="  pl-20">{toy.subCategoryName}</td>
