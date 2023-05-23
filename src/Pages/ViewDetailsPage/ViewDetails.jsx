@@ -95,7 +95,7 @@ const ViewDetails = () => {
             </p>
           </div>
         </div>
-        <div className="rounded-xl w-1/3">
+        <div className="rounded-lg w-1/3 ">
           <img className="max-h-screen	 " src={toy.picture} alt="" />
         </div>
       </div>
