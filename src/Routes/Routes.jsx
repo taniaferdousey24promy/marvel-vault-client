@@ -54,16 +54,16 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/viewdetails/:id",
+        path: "viewdetails/:id",
         element: (
           <PrivateRoute>
-            {" "}
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
+        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
 
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/toys/${params.id}`),
         // ),
         // loader: async ({ params }) =>{
         //   const response = await fetch(
@@ -74,7 +74,7 @@ const router = createBrowserRouter([
         //   return desiredObject;
 
         // }
-      },
+      }
     ],
   },
   {

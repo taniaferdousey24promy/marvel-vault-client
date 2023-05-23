@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import GalleryCard from "../GallerCard/GalleryCard";
 
 const Gallery = () => {
   const [toys, setToys] = useState([]);
@@ -10,6 +9,10 @@ const Gallery = () => {
       .then((data) => setToys(data));
   }, []);
   console.log(toys);
+  const slicedToys = toys.slice(0, 4);
+
+
+
   return (
     <div className="text-center">
       <h1 className="text-7xl font-bold text-black">TOYS HUB</h1>
@@ -29,8 +32,27 @@ const Gallery = () => {
       </span>
       <span className="ms-4 text-2pxl font-bold text-black">Accessories</span>
       <div className="flex mx-32 mt-20">
-        {toys.map((toy) => (
-          <GalleryCard key={toy.id} toy={toy}></GalleryCard>
+        {slicedToys.map((toy) => (
+          <div key={toy.id} >
+            <div className="card ml-4 glass">
+              <figure>
+                <img
+                  src={toy.picture}
+                  className="w-96 h-96"
+                  alt="Movie"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title mx-auto">{toys.toyName}</h2>
+                {/* <p>How to park your car at your garage?</p> */}
+                <div className="card-actions justify-end">
+                  <button  className="btn btn-primary mx-auto mt-4 ">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>

@@ -18,76 +18,65 @@ const AllToys = () => {
     setSearchTerm(event.target.value);
   };
   const filteredToys = toys.filter((toy) => {
-    return toy.subCategories.some((subCategory) =>
-      subCategory.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    return toy.toyName.toLowerCase().includes(searchTerm.toLowerCase());
   });
-
+  console.log(filteredToys);
   return (
-    <div className="bg-success text-black">
-      <div className=" overflow-x-auto mx-80 ">
-        <input
-          className="bg-warning placeholder-black border-2 border-blue-950 rounded-lg px-52 py-8  my-12 text-2xl text-center mx-28 "
-          type="text "
-          value={searchTerm}
-          onChange={handleSearch}
-          placeholder="Search By Name"
-          
-        />
-        <table className="table-auto  ">
+    <div className="bg-warning  pt-16 pb-96">
+      <input
+        className="bg-warning placeholder-black border-8 border-blue-950 rounded-lg px-96  mb-2   text-2xl mx-80  "
+        type="text "
+        value={searchTerm}
+        onChange={handleSearch}
+        placeholder="Search By Name"
+      />
+      <table className="table ml-52   ">
+        <tbody className="">
           <thead className="">
             <tr className="">
-              <th className="px-4 py-4 text-2xl border-2 border-blue-950 ">
-                Toy Name
+              {/* <th className="">serial</td> */}
+              <th className="bg-base-300    text-center">Serial</th>
+              <th className="bg-base-300  px-8   text-center">Seller Name</th>
+              <th className="bg-base-300  pl-24   text-center">Toy Name</th>
+              <th className="bg-base-300  pl-16  text-center">
+                Sub-Category Name
               </th>
-              <th className="px-4 py-4 text-2xl border-2 border-blue-950">
-                Price
-              </th>
-              <th className="px-8  py-4 text-2xl border-2 border-blue-950">
-                Sub-Category
-              </th>
-              <th className="px-8  py-4 text-2xl border-2 border-blue-950">
+              <th className="bg-base-300  pl-32   text-center">Price</th>
+              <th className="bg-base-300  pl-32   text-center">
                 Available Quantity
               </th>
-              <th className="px-8  py-4 text-2xl border-2 border-blue-950">
-                Seller Name
-              </th>
+              <th className="bg-base-300  px-20   text-center">See Details</th>
             </tr>
           </thead>
-          <tbody className="text-center">
-            {filteredToys.map((toy) => (
-              <React.Fragment key={toy.id}>
 
-                {toy.subCategories.map((subCategory) => (
-                  <tr key={subCategory.id}>
-                    <td className="px-8 py-4 border-2 border-blue-950 ">
-                      {" "}
-                      {subCategory.name}{" "}
-                    </td>
-                    <td className="px-8 py-4 border-2 border-blue-950 ">
-                      {" "}
-                      {subCategory.price}{" "}
-                    </td>
-                    <td className="px-8 py-4 border-2 border-blue-950 ">
-                      {" "}
-                      {toy.Category}{" "}
-                    </td>
-                    <td className="px-8 py-4 border-2 border-blue-950  ">
-                      {" "}
-                      {subCategory.availableQuantity}{" "}
-                    </td>
-                    <td className="px-8 py-4 border-2 border-blue-950  ">
-                      {" "}
-                      {subCategory.sellerName}{" "}
-                    </td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-
-                  </table>
-      </div>
+          {toys.map((toy, index) => {
+            const{_id}=toy;
+            if (toy.toyName.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return (
+                <tr key={toy.id} className="table w-full">
+                  <td className=" text-left ">{index + 1}</td>
+                  <td className=" text-left px-8">{toy.sellerName}</td>
+                  <td className=" text-center pl-16">{toy.toyName}</td>
+                  <td className=" text-left pl-24">{toy.subCategoryName}</td>
+                  <td className=" text-left pl-32">{toy.price}</td>
+                  <td className=" text-left pl-32">{toy.availableQuantity}</td>
+                  <td className=" text-left pl-32">
+                    {" "}
+                    <Link to={`/viewdetails/${_id}`}>
+                    <button className="btn btn-success">
+                      View Details
+                    </button>
+                    </Link>
+                    
+                    
+                  </td>
+                </tr>
+              );
+            }
+            return null;
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };

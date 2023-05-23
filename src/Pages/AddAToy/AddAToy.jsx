@@ -5,31 +5,32 @@ const AddAToy = () => {
     event.preventDefault();
 
     const form = event.target;
+    const subCategoryName = form.category.value;
 
-    const photo = form.photo.value;
-    const toyname = form.toyname.value;
-    const sellername = form.sellername.value;
-    const selleremail = form.selleremail.value;
-    const category = form.category.value;
+
+    const picture = form.photo.value;
+    const toyName = form.toyname.value;
     const price = form.price.value;
     const rating = form.rating.value;
-    const quantity = form.quantity.value;
-    const detail = form.detail.value;
+    const description = form.detail.value;
+    const sellerName = form.sellername.value;
+    const sellerEmail = form.selleremail.value;
+    const availableQuantity = form.quantity.value;
 
     const newToy = {
-      photo,
-      toyname,
-      sellername,
-      selleremail,
-      category,
+      subCategoryName,
+      picture,
+      toyName,
       price,
       rating,
-      quantity,
-      detail,
+      description,
+      sellerName,
+      sellerEmail,
+      availableQuantity
     };
     console.log(newToy);
 
-    fetch("http://localhost:5000/toys", {
+    fetch("http://localhost:5000/newToys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
