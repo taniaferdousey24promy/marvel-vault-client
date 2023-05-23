@@ -7,7 +7,6 @@ const AddAToy = () => {
     const form = event.target;
     const subCategoryName = form.category.value;
 
-
     const picture = form.photo.value;
     const toyName = form.toyname.value;
     const price = form.price.value;
@@ -26,7 +25,7 @@ const AddAToy = () => {
       description,
       sellerName,
       sellerEmail,
-      availableQuantity
+      availableQuantity,
     };
     console.log(newToy);
 
@@ -57,14 +56,15 @@ const AddAToy = () => {
 
       <form onSubmit={handleAddAToy}>
         <div className="  ">
+          {/* flexed url and toyname */}
           <div className="lg:flex  ">
             <div className="form-control w-1/2 px-5">
               <label className="label">
-                <span className="label-text">Picture Url</span>
+                <span className="label-text">Sub-Category Name</span>
               </label>
               <input
                 type="text"
-                name="photo"
+                name="category"
                 placeholder="email"
                 className="input input-bordered"
               />
@@ -72,53 +72,26 @@ const AddAToy = () => {
             <div className="w-1/2">
               <div className="form-control ">
                 <label className="label">
-                  <span className="label-text">Toy Name</span>
+                  <span className="label-text">Picture Url</span>
                 </label>
                 <input
                   type="text"
-                  name="toyname"
+                  name="photo"
                   placeholder="email"
                   className="input input-bordered"
                 />
               </div>
             </div>
           </div>
-
+          {/* flexed seller name and seller email */}
           <div className="lg:flex">
             <div className="form-control w-1/2 px-5">
               <label className="label">
-                <span className="label-text">Seller Name</span>
+                <span className="label-text">Toy Name</span>
               </label>
               <input
                 type="text"
-                name="sellername"
-                placeholder="email"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="w-1/2">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Seller Email</span>
-                </label>
-                <input
-                  type="text"
-                  name="selleremail"
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:flex">
-            <div className="form-control w-1/2 px-5">
-              <label className="label">
-                <span className="label-text">Category</span>
-              </label>
-              <input
-                type="text"
-                name="category"
+                name="toyname"
                 placeholder="email"
                 className="input input-bordered"
               />
@@ -137,7 +110,7 @@ const AddAToy = () => {
               </div>
             </div>
           </div>
-
+          {/* flexed category and price */}
           <div className="lg:flex">
             <div className="form-control w-1/2 px-5">
               <label className="label">
@@ -164,8 +137,35 @@ const AddAToy = () => {
               </div>
             </div>
           </div>
-
-          <div className="form-control  px-5">
+          {/* flexed rating and available quantity */}
+          <div className="lg:flex">
+            <div className="form-control w-1/2 px-5">
+            <label className="label">
+                <span className="label-text">Seller Name</span>
+              </label>
+              <input
+                type="text"
+                name="sellername"
+                placeholder="email"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="w-1/2">
+              <div className="form-control">
+              <label className="label">
+                  <span className="label-text">Seller Email</span>
+                </label>
+                <input
+                  type="text"
+                  name="selleremail"
+                  placeholder="email"
+                  className="input input-bordered"
+                />
+              </div>
+            </div>
+          </div>
+          {/* detail description */}
+          <div className="form-control  pl-4">
             <label className="label">
               <span className="label-text">Detail Description</span>
             </label>
@@ -176,18 +176,8 @@ const AddAToy = () => {
               className="input input-bordered"
             />
           </div>
-
-          <div className="lg:flex">
-            <label
-              htmlFor="
-            "
-            >
-              <a href="#" className="label-text-alt link link-hover ml-4">
-                Forgot password?
-              </a>
-            </label>
-          </div>
-          <div className="form-control mt-6">
+          {/* login button */}
+          <div className="form-control mx-5 mt-6">
             <button className="btn btn-primary">Login</button>
           </div>
         </div>
