@@ -32,11 +32,22 @@ import './Banner.css'
 
 // export default Banner;
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
+
+  useEffect(() => {
+    AOS.init(); // Initialize AOS when the component mounts
+
+    return () => {
+      AOS.refresh(); // Refresh AOS when the component unmounts
+    };
+  }, []);
   return (
-    <div className=" px-8 ">
+    <div className=" px-8 " data-aos="fade-up" data-aos-duration="3000">
+
 
         
     <div className="hero min-h-screen bg-base-200 bg-black  h-96 rounded-xl">
