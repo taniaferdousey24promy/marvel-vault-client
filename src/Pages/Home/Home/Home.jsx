@@ -5,10 +5,12 @@ import Gallery from "../Gallery/Gallery";
 
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import Hello from "../Hello/Hello";
+import PageTitle from "../../../PageTitle";
 
 const Home = () => {
   return (
     <div className="bg-warning">
+      <PageTitle title="Home"></PageTitle>
       <Banner></Banner>
       <About></About>
       <Gallery></Gallery>

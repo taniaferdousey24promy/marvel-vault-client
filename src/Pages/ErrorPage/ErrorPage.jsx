@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useRouteError } from "react-router-dom";
 import "./ErrorPage.css";
+import PageTitle from "../../PageTitle";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -8,6 +9,7 @@ const ErrorPage = () => {
 
   return (
     <div className="bg-black  ">
+      <PageTitle title="Error"></PageTitle>
       <div className=" px-96 py-32 ">
         <div className="error-page">
           <img
@@ -17,11 +19,11 @@ const ErrorPage = () => {
           />
         </div>
         <div className=" text-center">
-
-            <Link to='/'><button className="bg-black btn rounded-full btn-accent btn-outline">
-            Take me Home
-          </button></Link>
-          
+          <Link to="/">
+            <button className="bg-black btn rounded-full btn-accent btn-outline">
+              Take me Home
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -60,21 +60,10 @@ const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
-        loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`https://marvel-vault-server.vercel.app/toys/${params.id}`),
 
-        // loader: ({ params }) =>
-        //   fetch(`http://localhost:5000/toys/${params.id}`),
-        // ),
-        // loader: async ({ params }) =>{
-        //   const response = await fetch(
-        //     `http://localhost:5000/toys/toys/${params.id}`
-        //   );
-        //   const data = await response.json();
-        //   const desiredObject = data.nesetedArray.find(obj => obj.id == params.id);
-        //   return desiredObject;
-
-        // }
-      }
+      },
     ],
   },
   {
@@ -82,5 +71,9 @@ const router = createBrowserRouter([
     element: <ErrorPage></ErrorPage>,
   },
 ]);
+
+
+
+
 
 export default router;

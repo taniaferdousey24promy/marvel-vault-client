@@ -2,6 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
+    <div className=" border-b-8 border-black">
     <div className="bg-neutral p-8  ">
       <footer className="footer p-10 bg-neutral text-neutral-content h-80">
         <div className="w-96 ml-24 border-b-1">
@@ -23,19 +24,19 @@ const Footer = () => {
             <p className="mt-5">
               Contact Info for MARVEL VAULT Shop. <br />{" "}
               <span className="text-warning">Phone:</span>{" "}
-              <span className="text-2xl "> 123-456-7890 </span>
+              <span className=" "> 123-456-7890 </span>
             </p>
 
             <p className="mt-1">
               {" "}
               <span className="text-warning">Email:</span>{" "}
-              <span className="text-2xl "> marvelvault@gmail.com </span>
+              <span className=""> marvelvault@gmail.com </span>
             </p>
 
             <p className="mt-1">
               {" "}
               <span className="text-warning">Address of the Shop:</span>{" "}
-              <span className="text-2xl ">
+              <span className=" ">
                 {" "}
                 123 Main Street, Shantinogor, DHAKA{" "}
               </span>
@@ -127,12 +128,14 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <footer className=" border-t-2 border-white  footer footer-center py-4  bg-neutral text-neutral-content ">
+      <footer className=" border-t-2 border-black  footer footer-center pt-8  bg-neutral text-neutral-content ">
         <div>
           <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
         </div>
       </footer>
     </div>
+    </div>
+
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import PageTitle from "../../PageTitle";
 
 const ViewDetails = () => {
   // const {viewdetailsId} = useParams();
@@ -27,7 +28,7 @@ const ViewDetails = () => {
   // const { _id, Category, subCategories } = toyDetails;
   return (
     <div className="bg-warning text-white p-12  	">
-      {/* <h2>{toy.toyName}</h2> */}
+      <PageTitle title="View Details"></PageTitle>
 
       <div className="bg-black rounded-xl flex mx-80 mb-52">
         <div className="rounded-xl p-12 w-2/3 ">

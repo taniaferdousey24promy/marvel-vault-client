@@ -1,32 +1,54 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import GoogleBtn from "../GoogleBtn/GoogleBtn";
+import PageTitle from "../../PageTitle";
 
 const SignUp = () => {
+  const [error, setError] = useState("");
   const { createUser } = useContext(AuthContext);
-  const handleSignUp = event => {
+  const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
     const pictureURL = form.pictureURL.value;
     const password = form.password.value;
-    console.log(name, email,pictureURL, password);
+    console.log(name, email, pictureURL, password);
 
+    setError("");
+
+
+
+    if (email === "" || password === "") {
+      setError("Please fill in all the fields");
+      return;
+    } else if (password.length < 6) {
+      setError("password must be 6 characters or longer");
+      return;
+    } else {
+      createUser(email, password)
+        .then((result) => {
+          const loggedUser = result.user;
+          console.log(loggedUser);
+        })
+        .catch((error) => {
+          console.log(error);
+          setError(error.message);
+        });
+    }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
-
-       
       })
 
       .catch((error) => console.log(error));
   };
   return (
     <div>
+      <PageTitle title="Sign Up"></PageTitle>
       <div className="hero mt-5 bg-base-100">
         <div className="hero-content flex-col lg:flex-row">
           <div className="w-1/2">
@@ -45,10 +67,11 @@ const SignUp = () => {
                     type="text"
                     name="name"
                     placeholder="name"
+                    required
                     className="input input-bordered"
                   />
                 </div>
-                
+
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -57,6 +80,7 @@ const SignUp = () => {
                     type="email"
                     name="email"
                     placeholder="email"
+                    required
                     className="input input-bordered"
                   />
                 </div>
@@ -68,6 +92,7 @@ const SignUp = () => {
                     type="url"
                     name="pictureURL"
                     placeholder="pictureURL"
+                    required
                     className="input input-bordered"
                   />
                 </div>
@@ -79,6 +104,7 @@ const SignUp = () => {
                     type="password"
                     name="password"
                     placeholder="password"
+                    required
                     className="input input-bordered"
                   />
                   <label className="label">
@@ -94,11 +120,13 @@ const SignUp = () => {
                     value="Sign Up"
                   />
                 </div>
+                <p className="text-red-600"> {error}</p>
+
               </form>
               <p>
                 Already have an account?
                 <Link className="text-yellow-600 font-extrabold" to="/login">
-                  Login
+                    Login
                 </Link>
               </p>
             </div>
@@ -107,7 +135,7 @@ const SignUp = () => {
       </div>
 
       <div className="">
-        <GoogleBtn  ></GoogleBtn>
+        <GoogleBtn></GoogleBtn>
       </div>
     </div>
   );

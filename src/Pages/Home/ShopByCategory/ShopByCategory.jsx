@@ -8,7 +8,7 @@ const ShopByCategory = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://marvel-vault-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
@@ -40,7 +40,7 @@ const ShopByCategory = () => {
   // console.log(values);
 
   return (
-    <div className=" ms-36 mt-28 pb-20">
+    <div className="  mt-28 pb-20">
       <h1 className="text-7xl font-bold text-black text-center ">
         Shop By Category
       </h1>

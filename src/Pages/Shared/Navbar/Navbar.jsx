@@ -45,20 +45,27 @@ const Navbar = () => {
           <li>
             {user && (
               <li className="text-black">
-                <li>
-                  <Link to="/mytoys">My Toys</Link>
-                </li>
+
                 <li>
                   <Link to="/addatoy">Add A Toy </Link>
                 </li>
                 {user.displayName ? user.displayName : user.email}
 
+                <>
+                
+                <li>
+                  <Link to="/mytoys">My Toys</Link>
+                </li>
+                <li>
                 <button
                   className="btn bg-black text-white"
                   onClick={handleLogout}
                 >
                   Logout
-                </button>
+                </button>  
+                </li></>
+
+                
               </li>
             )}
           </li>

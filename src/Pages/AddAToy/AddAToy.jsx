@@ -1,5 +1,8 @@
 import React from "react";
 import Swal from "sweetalert2";
+import PageTitle from "../../PageTitle";
+
+
 const AddAToy = () => {
   const handleAddAToy = (event) => {
     event.preventDefault();
@@ -52,6 +55,10 @@ const AddAToy = () => {
   };
   return (
     <div className="  bg-base-200 p-24 ">
+      
+      <PageTitle title="Add A Toy">
+
+      </PageTitle>
       <h1 className="text-5xl font-bold ">Add A Toy</h1>
 
       <form onSubmit={handleAddAToy}>
@@ -178,7 +185,7 @@ const AddAToy = () => {
           </div>
           {/* login button */}
           <div className="form-control mx-5 mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn btn-primary">Submit</button>
           </div>
         </div>
       </form>
